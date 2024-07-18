@@ -17,3 +17,15 @@ Make sure you have Python 3.7 or higher installed. Install the required packages
 
 ```bash
 pip install -r requirements.txt
+```
+### runing
+Here’s an example of how to use the script:
+```
+streamlit run app.py
+```
+
+# Contributing
+Contributions are welcome! Please open an issue or submit a pull request.
+
+# License
+This project is licensed under the MIT License. See the LICENSE file for details
