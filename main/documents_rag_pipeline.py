@@ -6,6 +6,7 @@ from langchain_community.llms import HuggingFaceEndpoint
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 from dotenv import load_dotenv
+import streamlit as st
 import os
 
 def get_pdf_text(pdf_docs):
@@ -34,7 +35,8 @@ def get_vectorstore(chunks):
 def get_conversation_chain(vectorstore):
     load_dotenv()
 
-    sec_key = os.getenv("HUGGINGFACEHUB_API_TOKEN")
+    # sec_key = os.getenv("HUGGINGFACEHUB_API_TOKEN")
+    sec_key = st.secrets["HUGGINGFACEHUB_API_TOKEN"]
     repo_id = "meta-llama/Meta-Llama-3-8B-Instruct"
     llm = HuggingFaceEndpoint(repo_id=repo_id,max_length=128,temperature=0.7,token=sec_key)
     # llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature":0.5, "max_length":512})
