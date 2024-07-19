@@ -16,16 +16,16 @@ This project demonstrates how to use Retrieval-Augmented Generation (RAG) to cha
 Make sure you have Python 3.7 or higher installed. Install the required packages using `requirements.txt`.
 
 ```bash
-pip install -r requirements.txt
+pip install -r ./main/requirements.txt
 ```
 ### runing
 Here’s an example of how to use the script:
 ```
-streamlit run app.py
+streamlit ./main/run app.py
 ```
 
 # Contributing
 Contributions are welcome! Please open an issue or submit a pull request.
 
 # License
-This project is licensed under the MIT License. See the LICENSE file for details
+This project is licensed under the MIT License.
